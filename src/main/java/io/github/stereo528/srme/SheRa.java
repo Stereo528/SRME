@@ -1,19 +1,16 @@
 package io.github.stereo528.srme;
 
 import io.github.stereo528.srme.common.SheRaBlocks;
+import io.github.stereo528.srme.util.LogManager;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.resources.ResourceLocation;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 public class SheRa implements ModInitializer {
 
     public static final String MOD_ID = "she-ra";
     public static final String VERSION = FabricLoader.getInstance().getModContainer(MOD_ID).get().getMetadata().getVersion().getFriendlyString();
     public static final String MOD_NAME = FabricLoader.getInstance().getModContainer(MOD_ID).get().getMetadata().getName();
-
-    public static final Logger LOGGER = LoggerFactory.getLogger("She-Ra: Minecraft Edition");
 
     /**
      * @param location String ID of the object you want to locate
@@ -27,19 +24,16 @@ public class SheRa implements ModInitializer {
         }
     }
 
-    /**
-     * @param message String to pass into the logger
-     */
-    public static void debugLogger(String message) {
-        if(FabricLoader.getInstance().isDevelopmentEnvironment()) {
-            LOGGER.info(message);
-        }
-    }
-
     @Override
     public void onInitialize() {
-        debugLogger("In a Dev Environment");
-        debugLogger("Loading Blocks");
+        LogManager.log("dev_info", "In Dev Environment");
+
+        LogManager.log("dev_info", "Loading Blocks");
         SheRaBlocks.init();
+        LogManager.log("dev_info","Blocks Loaded");
+
+        LogManager.log("dev_info", "Loading Items");
+        LogManager.log("dev_info", "Loading Biomes");
+        LogManager.log("info", "Mod Loaded");
     }
 }
