@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "srme",
+  "id": "she-ra",
   "version": "${version}",
   "name": "She-Ra: Minecraft Edition",
   "description": "She-Ra: Minecraft Edition, or SR:ME for short, is a mod for Minecraft 1.18.1 and later. Its goal is to replicate some content from the 2018-2020 Netflix series and throw it into a Minecraft world. The mod is currently in alpha/pre-alpha state, and is not recommended for use in production, or at least yet.",
@@ -11,18 +11,18 @@
     "website": "https://stereo528.github.io"
   },
   "license": "BSD-3-Clause",
-  "icon": "assets/srme/icon.png",
+  "icon": "assets/she-ra/icon.png",
   "environment": "*",
   "entrypoints": {
     "client": [
-      "io.github.stereo528.srme.client.SRMEClient"
+      "io.github.stereo528.srme.client.SheRaClient"
     ],
     "main": [
-      "io.github.stereo528.srme.SRME"
+      "io.github.stereo528.srme.SheRa"
     ]
   },
   "mixins": [
-    "srme.mixins.json"
+    "she-ra.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=0.13.2",
