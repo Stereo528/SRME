@@ -15,6 +15,10 @@ public class SheRa implements ModInitializer {
 
     public static final Logger LOGGER = LoggerFactory.getLogger("She-Ra: Minecraft Edition");
 
+    /**
+     * @param location String ID of the object you want to locate
+     * @return returns the ResourceLocation of the object
+     */
     public static ResourceLocation locate(String location) {
         if (location.contains(":")) {
             return new ResourceLocation(location);
